@@ -120,12 +120,12 @@ class Youtube extends Component {
                           <iframe key={i} width="200" height="150" src={"https://www.youtube.com/embed/"+link.id.videoId} 
             frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen>
             </iframe></div>
-     <div className="col-md-6">
-     <span>Title: </span>
-     <span>{link.snippet.title}</span></div>
+        <div className="col-md-6">
+        <span>Title: </span>
+          <span>{link.snippet.title}</span></div>
          <div className="col-md-3"> 
-         <button type="button" onClick={()=>this.deletevideo(i)}class="btn btn-danger">
-        <i className="glyphicon glyphicon-remove" />
+         <button type="button" class="close" aria-label="Close">
+         <span aria-hidden="true">&times;</span>
         </button></div>
         
          </div>
