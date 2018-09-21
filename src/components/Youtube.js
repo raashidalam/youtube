@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import Thumbnails from './Thumbnail';
-const key ='AIzaSyBcDESxFVmjrNPaHQR7MdZZialiNRbkSY0';
-const result=10;
+import Env from '../Env';
+
 
 //https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=java&type=video&key=AIzaSyBcDESxFVmjrNPaHQR7MdZZialiNRbkSY0
 
@@ -38,7 +38,7 @@ class Youtube extends Component {
     //Fetch the video from youtuibe api
     clicked()
     {
-        return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${this.state.search}&key=AIzaSyBcDESxFVmjrNPaHQR7MdZZialiNRbkSY0`)
+        return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${this.state.search}&key=${key}`)
         .then((response) => response.json())
         .then((responseJson) => {
        console.log(responseJson);
