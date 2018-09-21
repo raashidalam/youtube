@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import { connect } from 'react-redux';
 import {postComment} from '../actions/YoutubeSearch';
 
+//This component is use for save the user comment to the database
 class PostCommentToDatabase extends Component {
     constructor(props){
         super(props);

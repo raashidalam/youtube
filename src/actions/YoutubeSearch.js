@@ -65,7 +65,7 @@ export function postDatabases(id,title){
 export function fetchcomment(videoid) {
     return function (dispatch){
       //https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=WPvGqX-TXP0&key=AIzaSyBcDESxFVmjrNPaHQR7MdZZialiNRbkSY0
-      return fetch(`https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=5&videoId=${videoid}&key=AIzaSyBcDESxFVmjrNPaHQR7MdZZialiNRbkSY0`)
+      return fetch(`https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=5&videoId=${videoid}&key=${your_key}`)
       .then(response => response.json())
       .then(responseJson => {
         const comment = responseJson.items.map(obj => obj);

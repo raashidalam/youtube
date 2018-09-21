@@ -1,7 +1,7 @@
 export function fetchVideo(search) {
     return dispatch => {
       dispatch(fetchProductsBegin());
-      return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&key=AIzaSyBcDESxFVmjrNPaHQR7MdZZialiNRbkSY0`)
+      return fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${search}&key=${your_key}`)
         .then(handleErrors)
         .then(res => res.json())
         .then(json => {

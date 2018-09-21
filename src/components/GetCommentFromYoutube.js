@@ -2,6 +2,8 @@ import React,{Component} from 'react'
 import { connect } from 'react-redux';
 import {fetchcomment, postComment} from '../actions/YoutubeSearch';
 import PostCommentToDatabase from './PostCommentTodatabase';
+
+//This component is use for get the comment from youtube
 class GetComment extends Component {
   
     render() { 
